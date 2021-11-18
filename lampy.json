@@ -1,0 +1,15 @@
+[{
+        "lampa": "1234",
+        "lokace": "Místo",
+        "popis": "<i>Zajímavé</i> informace",
+        "map_link": "https://mapy.cz",
+        "photo_link": "https://ct24.ceskatelevize.cz/sites/all/themes/custom/ct/images/weather/map-republic.png"
+    },
+    {
+        "lampa": "1",
+        "lokace": "Kostel ...",
+        "popis": "Pověst o Proseku\nPíše se rok 970, je 13. června a od Staré Boleslavi si namáhavě razí cestu kníže Boleslav II. a jeho druzi. Pohrdli obvyklou cestou a jali se bloudit hustým a nekonečným lesem. Na návrší před Rokytkou přemohla knížete únava. Zbrojnoši Jaroboj a Krotislav mu uchystají odpočinek na medvědí kůži. Poodstoupí, aby nerušili knížecí spánek. Boleslavovi se ve snu zjeví jeho strýc Václav a přikáže mu, aby na tomto místě nechal vystavět chrám. Boleslav přání svého zavražděného strýce splnil, stavba byla realizována během tří měsíců, dokončena je dne 17. září 970. První říjnovou neděli posvětil kostel sv. Vojtěch a zasvětil jej památce sv. Václava. Údajně šlo o první kostel zasvěcený tomuto světci.\n\nTolik praví (zestručněno) Václav Hájek z Libočan. Jak to bylo doopravdy? Nikdo neví, lze se jen domnívat. V tomto vyprávění je historická nepřesnost, a to skutečnost, že v Praze bylo biskupství založeno až v roce 973 a sv. Vojtěch na biskupský stolec dosedl až v roce 983. Tajemství, okořeněné zjevením „vévody české země“, vyjadřuje otázka, kterou si v knize o Proseku položil pan Miroslav Kuranda: „Proč byl tak výstavným a nákladným způsobem stavěný kostel založen na místě, na kterém není v té době doložena žádná osada?“ Vychází z předpokladu, že kostel byl skutečně založen kolem roku 970. Pak by fakt, že byl postaven na pustém, neobydleném místě svědčil o mocném a bohatém iniciátorovi stavby, o jehož skutečných motivech asi dnes už mnoho nezjistíme. Jiným důvodem stavby mohla být jakási posvátnost tohoto místa již v pohanské době, existence svatyně apod.",
+        "map_link": "https://mapy.cz",
+        "photo_link": "https://ct24.ceskatelevize.cz/sites/all/themes/custom/ct/images/weather/map-republic.png"
+    }
+]
