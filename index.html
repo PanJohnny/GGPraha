@@ -28,6 +28,9 @@
     <!-- Roboto -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
 
+    <!--Icon-->
+    <link rel="icon" href="gglogo.jpg">
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -37,11 +40,11 @@
         
         .dark_mode {
             background-color: #1a1a1a;
-            color: #fff;
+            color: #e5e5e5;
         }
         
         .light_mode {
-            background-color: #fff;
+            background-color: #e5e5e5;
             color: #1a1a1a;
         }
         
@@ -125,6 +128,15 @@
             text-decoration: none;
             color: inherit;
         }
+        
+        #logo {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .invert {
+            filter: invert(100%);
+        }
     </style>
 </head>
 
@@ -138,6 +150,8 @@
         <div class="field desktop_only">
             Černý režim &nbsp;&nbsp;<i class="gg-toggle-off dm_toggle" id="dm_toggle"></i>
         </div>
+
+        <img src="gglogo.jpg" alt="Game logo" id="logo" class="">
 
     </header>
 
@@ -181,23 +195,22 @@
 
         // detect click on toggle
         document.getElementById("dm_toggle").addEventListener("click", function() {
-            // toggle class
-            this.classList.toggle(toggle_off);
-            this.classList.toggle(toggle_on);
-
-            document.body.classList.toggle("dark_mode");
-            document.body.classList.toggle("light_mode");
+            toggleMode(this);
         });
 
         // detect click on toggle
         document.getElementById("dm_toggle_m").addEventListener("click", function() {
-            // toggle class
-            this.classList.toggle(toggle_off);
-            this.classList.toggle(toggle_on);
+            toggleMode(this);
+        });
 
+        function toggleMode(element) {
+            element.classList.toggle(toggle_off);
+            element.classList.toggle(toggle_on);
             document.body.classList.toggle("dark_mode");
             document.body.classList.toggle("light_mode");
-        });
+
+            document.getElementById("logo").classList.toggle("invert");
+        }
 
         document.getElementById("out_link").addEventListener("click", function() {
             window.open(link, '_blank');
@@ -228,13 +241,12 @@
 
                     var lokace = place.lokace;
                     var popis = place.popis;
-                    var map = place.map_link;
                     var photo = place.photo_link;
 
                     document.getElementById("out_name").innerHTML = lokace;
                     document.getElementById("out_popis").innerHTML = popis;
                     document.getElementById("out_img").innerHTML = '<img src="' + photo + '" alt="Image of ' + lokace + '">';
-                    link = map;
+                    link = place.map_link;
 
                     // toggle visibility
                     document.getElementById("out").classList.toggle("invisible");
