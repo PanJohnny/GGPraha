@@ -229,6 +229,8 @@
                 content: "Lampa: " + document.getElementById('lampa').value + "\n----------\nZávada: " + document.getElementById('popis').value
             };
             request.send(JSON.stringify(params))
+            alert("Děkujeme za nahlášení");
+            location.href="/";
         }
     </script>
 </body>
