@@ -1,15 +1,15 @@
 [{
         "lampa": 923568,
         "lokace": "Billa Prosek",
-        "popis": "Prosek je stanice metra Prahy 9 zhotovena v roce 2008, ale v plánech již od roku 2000<br>Leží 13 metrů pod povrchem a má dvě postranní nástupiště, mezi kterými můžete přecházet přes most. <br>Zajímavost: Linka metra C je nejstarší a nejvytíženější linka. Na nejvytíženějším úseku (I.P. Pavlova - Vyšehrad) je denně přepraveno 291000 osob.<br>",
+        "popis": "Prosek je stanice metra Prahy 9 zhotovena v roce 2008, ale v plánech již od roku 2000<br>Leží 13 metrů pod povrchem a má dvě postranní nástupiště, mezi kterými můžete přecházet přes most. <br><br><b>Zajímavost:</b> Linka metra C je nejstarší a nejvytíženější linka. Na nejvytíženějším úseku (I.P. Pavlova - Vyšehrad) je denně přepraveno 291000 osob.<br>",
         "map_link": "https://mapy.cz/zakladni?vlastni-body&x=14.4974580&y=50.1195962&z=19&ut=Nov%C3%BD%20bod&uc=9hMPsxYGAg&ud=Park%20P%C5%99%C3%A1telstv%C3%AD%2C%20Praha%2C%20Hlavn%C3%AD%20m%C4%9Bsto%20Praha",
         "photo_link": "https://images-ext-2.discordapp.net/external/1gAuZ32ynJau3mIQ5MW68ntwcXhEAmfx8hOmwI9ve84/https/3lmmfd2dibcf2x5s1h1zzs21-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/Prosek-Metro-Prague-03.jpg"
     },
     {
-        "lampa": "903093",
-        "lokace": "socha Jiřího Wolkera",
-        "popis": "Jiří Wolker byl český básník, který žil v první polovině 20. století, zemřel ve věku 23 let. Zajímavost: Park Přátelství je park s nejdelší umělou vodní soustavou v Praze. Původní rozloha měla být 23 ha, dnes je to pouze 11 ha.",
+        "lampa": 903093,
+        "lokace": "Socha Jiřího Wolkera",
+        "popis": "Jiří Wolker byl český básník, který žil v první polovině 20. století, zemřel ve věku 23 let. <br><br><b>Zajímavost:</b> Park Přátelství je park s nejdelší umělou vodní soustavou v Praze. Původní rozloha měla být 23 ha, dnes je to pouze 11 ha.",
         "map_link": "https://mapy.cz/zakladni?vlastni-body&x=14.4946283&y=50.1235258&z=19&ut=Nov%C3%BD%20bod&ut=Nov%C3%BD%20bod&uc=9hMPsxYGAgfSxhTb&ud=Park%20P%C5%99%C3%A1telstv%C3%AD%2C%20Praha%2C%20Hlavn%C3%AD%20m%C4%9Bsto%20Praha&ud=Park%20P%C5%99%C3%A1telstv%C3%AD%2C%20Praha%2C%20Hlavn%C3%AD%20m%C4%9Bsto%20Praha",
-        "photo_link": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Ji%C5%99%C3%AD_Wolker%2C_poet.jpg/n"
+        "photo_link": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Ji%C5%99%C3%AD_Wolker%2C_poet.jpg"
     }
 ]

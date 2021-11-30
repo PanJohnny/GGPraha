@@ -37,28 +37,28 @@
             font-size: 16px;
             line-height: 1.5;
         }
-
+        
         .dark_mode {
             background-color: #1a1a1a;
             color: #e5e5e5;
         }
-
+        
         .light_mode {
             background-color: #e5e5e5;
             color: #1a1a1a;
         }
-
+        
         .title {
             font-size: 2em;
             font-weight: bold;
         }
-
+        
         .dm_toggle {
             position: inherit;
             cursor: pointer;
             --ggs: 150%;
         }
-
+        
         .field {
             margin-bottom: 1em;
             display: flex;
@@ -70,7 +70,7 @@
             align-items: center;
             flex-direction: row;
         }
-
+        
         .untouchable {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -79,67 +79,65 @@
             -ms-user-select: none;
             user-select: none;
         }
-
+        
         .flex {
             display: flex;
             flex-direction: row;
         }
-
+        
         @media only screen and (max-width: 600px) {
             .mobile_only {
                 display: inherit;
             }
-
             .desktop_only {
                 display: none;
             }
         }
-
+        
         @media only screen and (min-width: 600px) {
             .mobile_only {
                 display: none;
             }
-
             .desktop_only {
                 display: inherit;
             }
         }
-
+        
         input {
             background-color: #fff;
             border: none;
             border-radius: 5px;
             font-size: 1em;
         }
-
+        
         .title {
             font-size: 1.5em;
             font-weight: bold;
         }
-
+        
         .invisible {
             display: none;
         }
-
+        
         img {
             max-width: 100%;
             height: auto;
         }
-
+        
         #out_link {
             text-decoration: none;
             color: inherit;
         }
-
+        
         #logo {
             width: 60px;
             height: 60px;
         }
-
+        
         .invert {
             filter: invert(100%);
         }
-
+        
         #popis {
             width: 90%;
         }
@@ -149,7 +147,7 @@
 <body class="dark_mode">
     <header class="untouchable flex">
         <div class="title">
-            Nahlašovací systém | GGPraha
+            O nás | GGPraha
         </div>
         &nbsp;&nbsp;
 
@@ -162,8 +160,7 @@
     </header>
 
     <div class="flex mobile_only" style="white-space: nowrap;">
-        Černý režim &nbsp;&nbsp; <i class="gg-toggle-off dm_toggle" id="dm_toggle_m"
-            style="display: inline-block; align-self: center;"></i>
+        Černý režim &nbsp;&nbsp; <i class="gg-toggle-off dm_toggle" id="dm_toggle_m" style="display: inline-block; align-self: center;"></i>
         <br><br>
     </div>
 
@@ -174,15 +171,16 @@
     Číslo lampy:
     <br>
     <input type="number" name="lampa" id="lampa" placeholder="Číslo lampy">
-    <br>
-    Popis závady:
+    <br> Popis závady:
     <br>
     <input type="text" name="popis" id="popis" placeholder="Popis závady">
     <br>
     <input type="button" value="Odeslat" onclick="send()">
 
-
-
+    <footer>
+        <hr> Coded by <a href="https://github.com/PanJohnny">PanJohnny</a> | <a href="https://github.com/ggpraha/ggpraha.github.io">Opensourced under MIT License ♥</a> |
+        <a href="https://gymlit.cz"></a>Gymnázium Praha 9 Litoměřická</a>
+    </footer>
 
     <script>
         var toggle_off = "gg-toggle-off";
@@ -196,12 +194,12 @@
         }
 
         // detect click on toggle
-        document.getElementById("dm_toggle").addEventListener("click", function () {
+        document.getElementById("dm_toggle").addEventListener("click", function() {
             toggleMode(this);
         });
 
         // detect click on toggle
-        document.getElementById("dm_toggle_m").addEventListener("click", function () {
+        document.getElementById("dm_toggle_m").addEventListener("click", function() {
             toggleMode(this);
         });
 
@@ -216,8 +214,8 @@
 
         function send() {
             /*
-            * Moc vás prosíme abyste nespamovali náš webhook
-            */
+             * Moc vás prosíme abyste nespamovali náš webhook
+             */
             let webhook = 'https://discord.com/api/webhooks/914789987013234719/TfdiJVI_auk62cPNj0JoN5w98LbCpQrcaqD_dIO2V8_JM1M7WMHp1Kpf87zRCbcg80-e';
             const request = new XMLHttpRequest();
             request.open("POST", webhook);
@@ -230,7 +228,7 @@
             };
             request.send(JSON.stringify(params))
             alert("Děkujeme za nahlášení");
-            location.href="/";
+            location.href = "/";
         }
     </script>
 </body>
