@@ -11,5 +11,26 @@
         "popis": "Jiří Wolker byl český básník, který žil v první polovině 20. století, zemřel ve věku 23 let. <br><br><b>Zajímavost:</b> Park Přátelství je park s nejdelší umělou vodní soustavou v Praze. Původní rozloha měla být 23 ha, dnes je to pouze 11 ha.",
         "map_link": "https://mapy.cz/zakladni?vlastni-body&x=14.4946283&y=50.1235258&z=19&ut=Nov%C3%BD%20bod&ut=Nov%C3%BD%20bod&uc=9hMPsxYGAgfSxhTb&ud=Park%20P%C5%99%C3%A1telstv%C3%AD%2C%20Praha%2C%20Hlavn%C3%AD%20m%C4%9Bsto%20Praha&ud=Park%20P%C5%99%C3%A1telstv%C3%AD%2C%20Praha%2C%20Hlavn%C3%AD%20m%C4%9Bsto%20Praha",
         "photo_link": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Ji%C5%99%C3%AD_Wolker%2C_poet.jpg"
+    },
+    {
+        "lampa": 903932,
+        "lokace": "Socha milenců na Střížkově",
+        "popis": "Socha milenců na Střížkově byla zhotovena v roce 1975 Karlem Němcem, a je postavena z vápence.",
+        "map_link": "https://mapy.cz/zakladni?x=14.4848060&y=50.1254114&z=19&source=base&id=2337205",
+        "photo_link": "https://d34-a.sdn.cz/d_34/c_img_H_a/jZMBNS4.jpeg?fl=res,2200,2200,1"
+    },
+    {
+        "lampa": 924548,
+        "lokace": "Madlina",
+        "popis": "Madlina vznikla v roce 1984, původně pouze pro noční linku 509. Jméno zastávky je odvozeno od Magdalény H., která byla dlouholetou vedoucí na oddělení jízdních řádů dopravního oddělení Prahy. \n",
+        "map_link": "https://mapy.cz/zakladni?x=14.4840872&y=50.1203624&z=19&source=pubt&id=15304422",
+        "photo_link": "https://www.vylety-zabava.cz/media/djmediatools/cache/images/phocagallery/zabava/praha/detske-hriste-park-vaclavka/1024x0-towidth-90-03-detske-hriste-park-vaclavka.jpg"
+    },
+    {
+        "lampa": 923534,
+        "lokace": "Metro Střížkov",
+        "popis": "Stanici metra Střížkov navrhnul Patrik Kotas, patří k architektonicky nejvýraznějším stanicím v Praze, stejně tak k těm nejdražším. V roce 2009 byla Evropskou asociací ocelových konstrukcí oceněna za vzhled. Do provozu byla uvedena ve stejný den jako stanice metra Prosek - 8.5.2008.",
+        "map_link": "https://mapy.cz/zakladni?x=14.4895348&y=50.1265979&z=19&source=pubt&id=15206993",
+        "photo_link": "https://agc-obeikanglass.com.sa/image/245/3/strizhkov-metro-5875.jpg"
     }
 ]
