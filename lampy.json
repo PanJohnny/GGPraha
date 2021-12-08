@@ -1,9 +1,10 @@
-[{
+[
+    {
         "lampa": 923568,
-        "lokace": "Billa Prosek",
-        "popis": "Prosek je stanice metra Prahy 9 zhotovena v roce 2008, ale v plánech již od roku 2000<br>Leží 13 metrů pod povrchem a má dvě postranní nástupiště, mezi kterými můžete přecházet přes most. <br><br><b>Zajímavost:</b> Linka metra C je nejstarší a nejvytíženější linka. Na nejvytíženějším úseku (I.P. Pavlova - Vyšehrad) je denně přepraveno 291000 osob.<br>",
+        "lokace": "Stanice Metra Prosek",
+        "popis": "Prosek je stanice metra Prahy 9 zhotovena v roce 2008, ale v plánech již od roku 2000<br>Leží 13 metrů pod povrchem a má dvě postranní nástupiště, mezi kterými můžete přecházet přes most. <br><br><b>Zajímavost:</b> Linka metra C je nejstarší a nejvytíženější linka. Na nejvytíženějším úseku (I.P. Pavlova - Vyšehrad) je denně přepraveno 291000 osob.",
         "map_link": "https://mapy.cz/zakladni?vlastni-body&x=14.4974580&y=50.1195962&z=19&ut=Nov%C3%BD%20bod&uc=9hMPsxYGAg&ud=Park%20P%C5%99%C3%A1telstv%C3%AD%2C%20Praha%2C%20Hlavn%C3%AD%20m%C4%9Bsto%20Praha",
-        "photo_link": "https://images-ext-2.discordapp.net/external/1gAuZ32ynJau3mIQ5MW68ntwcXhEAmfx8hOmwI9ve84/https/3lmmfd2dibcf2x5s1h1zzs21-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/Prosek-Metro-Prague-03.jpg"
+        "photo_link": "https://upload.wikimedia.org/wikipedia/commons/3/34/Prosek%2C_Billa_%282%29.JPG"
     },
     {
         "lampa": 903093,
@@ -17,7 +18,7 @@
         "lokace": "Socha milenců na Střížkově",
         "popis": "Socha milenců na Střížkově byla zhotovena v roce 1975 Karlem Němcem, a je postavena z vápence.",
         "map_link": "https://mapy.cz/zakladni?x=14.4848060&y=50.1254114&z=19&source=base&id=2337205",
-        "photo_link": "https://d34-a.sdn.cz/d_34/c_img_H_a/jZMBNS4.jpeg?fl=res,2200,2200,1"
+        "photo_link": "https://d34-a.sdn.cz/d_34/c_img_H_a/jZMBNS4.jpeg"
     },
     {
         "lampa": 924548,
@@ -32,5 +33,40 @@
         "popis": "Stanici metra Střížkov navrhnul Patrik Kotas, patří k architektonicky nejvýraznějším stanicím v Praze, stejně tak k těm nejdražším. V roce 2009 byla Evropskou asociací ocelových konstrukcí oceněna za vzhled. Do provozu byla uvedena ve stejný den jako stanice metra Prosek - 8.5.2008.",
         "map_link": "https://mapy.cz/zakladni?x=14.4895348&y=50.1265979&z=19&source=pubt&id=15206993",
         "photo_link": "https://agc-obeikanglass.com.sa/image/245/3/strizhkov-metro-5875.jpg"
+    },
+    {
+        "lampa": "gymlit",
+        "lokace": "<a href='https://gymlit.cz'> Gymnázium Litoměřická</a>",
+        "popis": "Gymnázium Litoměřická bylo založeno v roce 1953, tehdy ještě v budově staré čakovické školy. Na současné místo se přestěhovalo v roce 1973. Za 48 letou historii jí prošlo přes 20 tisíc studentů. V současné době je na výběr jak studium čtyřleté, tak osmileté. Gymnázium se může chlubit vysokou úspěšností přijetí absolventů na vysoké školy, na vysokou školu bylo přijato 95% absolventů. Nedávno prošla budova školy výraznou rekonstrukcí. <br><br><b>Zajímavost:</b> Gymnázium Litoměřická je partnerskou školu Přírodovědecké a Pedagogické fakulty Univerzity Karlovy. ",
+        "map_link": "https://mapy.cz/zakladni?x=14.4867572&y=50.1188885&z=19&source=firm&id=312018",
+        "photo_link": "https://scontent-prg1-1.xx.fbcdn.net/v/t1.6435-9/201299581_468844527597878_6339799238998876200_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=e3f864&_nc_ohc=5-f5-DtMAZcAX9gtpTI&_nc_ht=scontent-prg1-1.xx&oh=57ed475c6c06105537b2abb38edfc6ed&oe=61D54517"
+    },
+    {
+        "lampa": 902181,
+        "lokace": "Prosecké skály",
+        "popis": "Prosecké skály jsou od roku 1968 přírodní památka, nacházející se mezi pražskými čtvrti Libeň a Prosek. Nalezneme zde stěny starých lomů na cenomanský pískovec. Dále se tu nachází systém umělých podzemních chodeb. Skály dokumentují vývoj české křídové pánve. Ve skalách žijí některé silně ohrožené druhy netopýrů, například vrápenec malý či netopýr ušatý. <br><br><b>Zajímavost:</b> Systém podzemních chodeb byl za 2. světové války využíván jako protiletecký kryt.",
+        "map_link": "https://mapy.cz/zakladni?x=14.4853329&y=50.1167378&z=18&source=base&id=2084260",
+        "photo_link": "https://www.vylety.online/wp-content/uploads/2021/03/20210307_1458_1096-768x512.jpg"
+    },
+    {
+        "lampa": 9235147,
+        "lokace": "Základní umělecká škola Prosek",
+        "popis": "Základní umělecká škola na Proseku nabízí hodiny tance, zpěvu či výtvarného umění. Nyní škola nabízí výstavu Mezinárodní dětská výtvarná výstava LIDICE 2021 nebo třeba Pražské poetické setkaní 2021.",
+        "map_link": "https://mapy.cz/zakladni?x=14.4923978&y=50.1163973&z=18&source=firm&id=427140",
+        "photo_link": "https://d48-a.sdn.cz/d_48/c_img_G_C/lTHRlx.jpeg"
+    },
+    {
+        "lampa": 902396,
+        "lokace": "Sousoší Pieta",
+        "popis": "Sousoší Piety na Proseku je vyobrazení Panny Marie a Krista. Jedná se o výjev z cyklu života Ježíše Krista. Dále zobrazuje 13. zastavení křížové cesty nebo také jednu ze sedmi bolestí Panny Marie. ",
+        "map_link": "https://mapy.cz/zakladni?x=14.4924193&y=50.1163939&z=18&source=base&id=2233401",
+        "photo_link": "https://www.praha9.cz/sites/default/files/images/import/21.jpg"
+    },
+    {
+        "lampa": 924752,
+        "lokace": "Kostel sv. Václava",
+        "popis": "Kostel sv. Václava je římskokatolický kostel vybudovaný na svahu údolí Rokytky. Jedná se o nejstarší stavební památku na Proseku. V Hájkově kronice se píše, že kostel založil Boleslav II, tu ale nemůžeme považovat za historicky spolehlivou. Dle výzkumu s stáří vzniku datuje na přelom 11. a 12. století. Od roku 1311 se zde nachází farnost. <br><br><b>Zajímavost:</b> Kostel byl několikrát zničen. Poprvé byl v roce 1420 zbořen husity. Poté byl za třicetileté války vypálen.",
+        "map_link": "https://mapy.cz/zakladni?x=14.4936317&y=50.1178661&z=18&source=base&id=1702851",
+        "photo_link": "https://www.kudyznudy.cz/files/28/285af41e-639e-4987-b4a8-4714c71ebcec.jpg"
     }
 ]
