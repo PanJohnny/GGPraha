@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug</title>
+</head>
+
+<body>
+    <div id="hide">
+        <h1>Tato strána je pouze pro testování</h1>
+        <input type="button" value="Vstopuit na vlastní nebezpečí" id="btn" onclick="fetch_lampy()">
+
+    </div>
+    <div id="out"></div>
+    <script>
+        // check if on this server exists endpoint /lampy.json if it does not use ggpraha.github.io/lampy.json to fetch data from
+        let lampy_local = '/lampy.json';
+        let lampy_public = 'https://ggpraha.github.io/lampy.json';
+
+        let lampy_url = lampy_local;
+
+        // send blank request to lampy_url and check if it exists
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', lampy_url, true);
+        xhr.send();
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status != 200) {
+                    // lampy.json does not exist
+                    lampy_url = lampy_public;
+                    console.log('lampy.json does not exist');
+                }
+            }
+        }
+
+        function fetch_lampy() {
+            document.getElementById('hide').style.display = 'none';
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', lampy_url, true);
+            xhr.send();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        let lampy = JSON.parse(xhr.responseText);
+
+                        // check if lampy is json array
+                        if (lampy.constructor === Array) {
+                            // lampy is json array
+                            console.log('lampy is json array');
+                            console.log(lampy);
+                        } else {
+                            // lampy is not json array
+                            console.error('lampy is not json array');
+                            console.log(lampy);
+                        }
+
+                        // check if lampy is empty
+                        if (lampy.length == 0) {
+                            // lampy is empty
+                            console.error('lampy is empty');
+                        } else {
+                            // lampy is not empty
+                            console.log('lampy is not empty');
+                        }
+
+                        // loop throught the array and for each object get value with key "lampa" if it exists if not do nothing
+                        for (let i = 0; i < lampy.length; i++) {
+                            let lampa = lampy[i].lampa;
+                            if (lampa) {
+                                document.getElementById("out").innerHTML += lampa + '<br>';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
