@@ -188,7 +188,7 @@
 
     <footer>
         <hr> Coded by <a href="https://github.com/PanJohnny">PanJohnny</a> | <a href="https://github.com/ggpraha/ggpraha.github.io">Opensourced under MIT License ♥</a> |
-        <a href="https://gymlit.cz"></a>Gymnázium Praha 9 Litoměřická</a>
+        <a href="https://gymlit.cz">Gymnázium Praha 9 Litoměřická</a>
     </footer>
     <script>
         var toggle_off = "gg-toggle-off";
@@ -249,7 +249,13 @@
 
                     var lokace = place.lokace;
                     var popis = place.popis;
-                    var photo = place.photo_link;
+                    var photo;
+
+                    if(place.photo_link.contains("&&&")) {
+                        photo = place.photo_link.split("&&&")[Math.floor(Math.random()*2)];
+                    } else {
+                        photo = place.photo_link;
+                    }
 
                     document.getElementById("out_name").innerHTML = lokace;
                     document.getElementById("out_popis").innerHTML = popis;
