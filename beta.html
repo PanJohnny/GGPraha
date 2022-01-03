@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>GGPraha | Beta</title>
+    <meta name="title" content="GGPraha | Beta">
+    <meta name="description" content="Školní projekt">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ggpraha.github.io/">
+    <meta property="og:title" content="GGPraha | Beta">
+    <meta property="og:description" content="Školní projekt">
+    <meta property="og:image" content="gglogo.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ggpraha.github.io/">
+    <meta property="twitter:title" content="GGPraha | Beta">
+    <meta property="twitter:description" content="Školní projekt">
+    <meta property="twitter:image" content="gglogo.jpg">
+
+    <link href='https://css.gg/css' rel='stylesheet'>
+
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+    <!--Icon-->
+    <link rel="icon" href="gglogo.jpg">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .dark_mode {
+            background-color: #1a1a1a;
+            color: #e5e5e5;
+        }
+        
+        .light_mode {
+            background-color: #e5e5e5;
+            color: #1a1a1a;
+        }
+        
+        .title {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .dm_toggle {
+            position: inherit;
+            cursor: pointer;
+            --ggs: 150%;
+        }
+        
+        .field {
+            margin-bottom: 1em;
+            display: flex;
+            border-color: inherit;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 5px;
+            padding: 0.7em;
+            align-items: center;
+            flex-direction: row;
+        }
+        
+        .untouchable {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .flex {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .mobile_only {
+                display: inherit;
+            }
+            .desktop_only {
+                display: none;
+            }
+        }
+        
+        @media only screen and (min-width: 600px) {
+            .mobile_only {
+                display: none;
+            }
+            .desktop_only {
+                display: inherit;
+            }
+        }
+        
+        #inp input {
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        
+        .title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .invisible {
+            display: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        #out_link {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        #logo {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .invert {
+            filter: invert(100%);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body class="dark_mode">
+    <header class="untouchable flex">
+        <div class="title">
+            <a href="/credits">Geolokační hra | GGPraha - Beta verze</a>
+        </div>
+        &nbsp;&nbsp;
+
+        <div class="field desktop_only">
+            Černý režim &nbsp;&nbsp;<i class="gg-toggle-off dm_toggle" id="dm_toggle"></i>
+        </div>
+
+        <img src="gglogo.jpg" alt="Game logo" id="logo" class="">
+
+    </header>
+
+    <div class="flex mobile_only" style="white-space: nowrap;">
+        Černý režim &nbsp;&nbsp; <i class="gg-toggle-off dm_toggle" id="dm_toggle_m" style="display: inline-block; align-self: center;"></i>
+        <br><br>
+    </div>
+    Toto je testovací verze stránky!
+    <br>
+    <div id="inp" class="flex">
+        Zadejte číslo lampy:
+        <input type="number" name="lampa" id="lampa" placeholder="Číslo lampy">
+    </div>
+
+    <div id="out" class="invisible">
+        <hr>
+        <div id="out_name" class="title"></div>
+        <br>
+        <div class="flex" style="text-align: center;">
+            <i class="gg-link" id="out_link"></i>
+        </div>
+        <p id="out_popis"></p>
+
+
+        <div id="out_img"></div>
+    </div>
+
+    <footer>
+        <hr> Coded by <a href="https://github.com/PanJohnny">PanJohnny</a> | <a href="https://github.com/ggpraha/ggpraha.github.io">Opensourced under MIT License ♥</a> |
+        <a href="https://gymlit.cz">Gymnázium Praha 9 Litoměřická</a> | Beta verze
+    </footer>
+    <script>
+        var toggle_off = "gg-toggle-off";
+        var toggle_on = "gg-toggle-on";
+        var link = "";
+
+        // check if there is a hash in the url and if it is a lampa number (only numbers)
+        if (window.location.hash.length > 0 && !isNaN(window.location.hash.substring(1))) {
+            document.getElementById("lampa").value = window.location.hash.substring(1);
+            getPlaceById(window.location.hash.substring(1));
+        }
+
+        // detect click on toggle
+        document.getElementById("dm_toggle").addEventListener("click", function() {
+            toggleMode(this);
+        });
+
+        // detect click on toggle
+        document.getElementById("dm_toggle_m").addEventListener("click", function() {
+            toggleMode(this);
+        });
+
+        function toggleMode(element) {
+            element.classList.toggle(toggle_off);
+            element.classList.toggle(toggle_on);
+            document.body.classList.toggle("dark_mode");
+            document.body.classList.toggle("light_mode");
+
+            document.getElementById("logo").classList.toggle("invert");
+        }
+
+        document.getElementById("out_link").addEventListener("click", function() {
+            window.open(link, '_blank');
+        });
+
+        // detect number being confirmed
+        document.getElementById("lampa").addEventListener("keyup", function(event) {
+            if (event.key.toLowerCase() == "enter" || event.key.toLowerCase() == "return") {
+                getPlaceById(this.value);
+            }
+        });
+
+        function getPlaceById(id) {
+            // read file lampy.json
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(this.responseText);
+                    var place = data.find(x => x.lampa == id);
+
+                    if (!place) {
+                        document.getElementById("out").classList.add("invisible");
+                        document.getElementById("out_name").innerHTML = "";
+                        document.getElementById("out_popis").innerHTML = "";
+                        document.getElementById("out_img").innerHTML = "";
+                        return;
+                    }
+
+                    var lokace = place.lokace;
+                    var popis = place.popis;
+                    var photo;
+
+                    if(place.photo_link.contains("&&&")) {
+                        photo = place.photo_link.split("&&&")[Math.floor(Math.random()*2)];
+                    } else {
+                        photo = place.photo_link;
+                    }
+
+                    document.getElementById("out_name").innerHTML = lokace;
+                    document.getElementById("out_popis").innerHTML = popis;
+                    document.getElementById("out_img").innerHTML = '<img src="' + photo + '" alt="Image of ' + lokace + '">';
+                    link = place.map_link;
+
+                    // toggle visibility
+                    document.getElementById("out").classList.toggle("invisible");
+                }
+            };
+            xhttp.open("GET", "lampy_inp.json", true);
+            xhttp.send();
+        }
+    </script>
+</body>
+
+</html>
