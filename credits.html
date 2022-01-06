@@ -39,28 +39,28 @@
             font-size: 16px;
             line-height: 1.5;
         }
-        
+
         .dark_mode {
             background-color: #1a1a1a;
             color: #e5e5e5;
         }
-        
+
         .light_mode {
             background-color: #e5e5e5;
             color: #1a1a1a;
         }
-        
+
         .title {
             font-size: 2em;
             font-weight: bold;
         }
-        
+
         .dm_toggle {
             position: inherit;
             cursor: pointer;
             --ggs: 150%;
         }
-        
+
         .field {
             margin-bottom: 1em;
             display: flex;
@@ -72,7 +72,7 @@
             align-items: center;
             flex-direction: row;
         }
-        
+
         .untouchable {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -81,65 +81,67 @@
             -ms-user-select: none;
             user-select: none;
         }
-        
+
         .flex {
             display: flex;
             flex-direction: row;
         }
-        
+
         @media only screen and (max-width: 600px) {
             .mobile_only {
                 display: inherit;
             }
+
             .desktop_only {
                 display: none;
             }
         }
-        
+
         @media only screen and (min-width: 600px) {
             .mobile_only {
                 display: none;
             }
+
             .desktop_only {
                 display: inherit;
             }
         }
-        
+
         #inp input {
             background-color: #fff;
             border: none;
             border-radius: 5px;
             font-size: 1em;
         }
-        
+
         .title {
             font-size: 1.5em;
             font-weight: bold;
         }
-        
+
         .invisible {
             display: none;
         }
-        
+
         img {
             max-width: 100%;
             height: auto;
         }
-        
+
         #out_link {
             text-decoration: none;
             color: inherit;
         }
-        
+
         #logo {
             width: 60px;
             height: 60px;
         }
-        
+
         .invert {
             filter: invert(100%);
         }
-        
+
         a {
             text-decoration: none;
             color: inherit;
@@ -163,17 +165,47 @@
     </header>
 
     <div class="flex mobile_only" style="white-space: nowrap;">
-        Černý režim &nbsp;&nbsp; <i class="gg-toggle-off dm_toggle" id="dm_toggle_m" style="display: inline-block; align-self: center;"></i>
+        Černý režim &nbsp;&nbsp; <i class="gg-toggle-off dm_toggle" id="dm_toggle_m"
+            style="display: inline-block; align-self: center;"></i>
         <br><br>
     </div>
 
-    Jsme studenti Gymnázia Litoměřická a tato stránka byla vytvořen na základě školního projektu.
+    <h2>O projektu</h2>
 
-    <h2>
-        Začátky
-    </h2>
-    Vytvořili jsme pětičlenný tým a začaly jsme návrhem. Původní návrh byl vytvořen v rámci projektu v lockdownu. Pak jsme se rozhodli, že vznikne tato webová stránka. Honza (<a href="https://linktr.ee/PanJohnny">@PanJohnny</a>) naprogramoval webovou
-    stránku a začali jsme zjišťovat informace.
+    <p>Když se řekne Prosek, většina lidí si představí nudné sídliště s vysokými šedými paneláky bez nápadu se spoustou
+        betonových ploch mezi nimi a s nedostatečnou zelení. Tak to mohlo vypadat před téměř 50 lety, kdy sídliště
+        vznikalo. Ale je tomu opravdu tak i nyní? Opravdu nejsou na Proseku zajímavá místa s historií, ať už s dřívější
+        nebo nedávnou? Pokud se chceš přesvědčit o opaku a něco se o zajímavých místech v této lokalitě dozvědět, tato
+        hraje určená přímo pro Tebe.</p>
+    <div id=”info”>
+        <b>Zde jsou základní informace o trase:</b>
+        <ul>
+            <li>Délka trasy: 4,5 – 5 km</li>
+            <li>Doba trvání: cca 1,5 hod</li>
+            <li>Počet zastavení: 10</li>
+            <li>Začátek a konec hry: u stanice metra Prosek (před Billou)</li>
+            <li>Terén asfaltové cesty a chodníky</li>
+            <li>Profil: téměř rovina až mírný kopec</li>
+            <li>Dostupnost: za každého počasí, 24/7</li>
+            <li>Pro koho je hra vhodná: pro všechny pro všechny bez rozdílu věku (také i pro kočárky)</li>
+        </ul>
+    </div>
+
+    <div id=”howto”>
+        A jak si můžeš hru zahrát?
+        <ul>
+            <li>
+                hra je optimalizovaná pro mobilní telefony, takže stačí mít chytrý telefon s datovým tarifem
+            </li>
+            <li>
+                v blízkosti každé zastávky je lampa pouličního osvětlení, která má na sobě unikátní číslo, správnou
+                lampu musíš najít a toto číslo je nutné vepsat do políčka nahoře na této webové stránce a pokud je číslo
+                správné, objeví se informace o příslušném místě
+            </li>
+        </ul>
+        <b>Hodně štěstí!!! Odměnou Ti budou nové a jistě i zajímavé informace o této městské části.</b>
+    </div>
+    <hr>
 
     <h2>
         Autoři
@@ -183,7 +215,8 @@
             Honza (<a href="https://linktr.ee/PanJohnny">@PanJohnny</a>) - webová stránka
         </li>
         <li>
-            Ondra (<a href="https://www.instagram.com/fikrondra/">@Onfra</a>) - administrace projektu, zařizování povolení
+            Ondra (<a href="https://www.instagram.com/fikrondra/">@Onfra</a>) - administrace projektu, zařizování
+            povolení
         </li>
         <li>
             Matěj (@Mateuszeus) - zjišťování informací o místech, formátování
@@ -192,13 +225,19 @@
             Karel (<a href="https://www.instagram.com/karel_erban/">@Svickova</a>) - design, logo, morální podpora
         </li>
         <li>
-            Jáchym (<a href="https://www.instagram.com/jajus14kalus/">@Jajus14</a>) - komunikace s externími odborníky, zjišťování informací
+            Jáchym (<a href="https://www.instagram.com/jajus14kalus/">@Jajus14</a>) - komunikace s externími odborníky,
+            zjišťování informací
         </li>
     </ul>
 
+    <hr>
+    <h2>Zdroje</h2>
+    wikipedie.cz, kudyznudy.cz, gymlit.cz, dpp.cz, nasepraha.cz, vylety-zabava.cz, sv.dvur.cz
+
 
     <footer>
-        <hr> Coded by <a href="https://github.com/PanJohnny">PanJohnny</a> | <a href="https://github.com/ggpraha/ggpraha.github.io">Opensourced under MIT License ♥</a> |
+        <hr> Coded by <a href="https://github.com/PanJohnny">PanJohnny</a> | <a
+            href="https://github.com/ggpraha/ggpraha.github.io">Opensourced under MIT License ♥</a> |
         <a href="https://gymlit.cz">Gymnázium Praha 9 Litoměřická</a>
     </footer>
     <script>
@@ -206,12 +245,12 @@
         var toggle_on = "gg-toggle-on";
 
         // detect click on toggle
-        document.getElementById("dm_toggle").addEventListener("click", function() {
+        document.getElementById("dm_toggle").addEventListener("click", function () {
             toggleMode(this);
         });
 
         // detect click on toggle
-        document.getElementById("dm_toggle_m").addEventListener("click", function() {
+        document.getElementById("dm_toggle_m").addEventListener("click", function () {
             toggleMode(this);
         });
 
