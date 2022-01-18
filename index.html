@@ -39,28 +39,28 @@
             font-size: 16px;
             line-height: 1.5;
         }
-        
+
         .dark_mode {
             background-color: #1a1a1a;
             color: #e5e5e5;
         }
-        
+
         .light_mode {
             background-color: #e5e5e5;
             color: #1a1a1a;
         }
-        
+
         .title {
             font-size: 2em;
             font-weight: bold;
         }
-        
+
         .dm_toggle {
             position: inherit;
             cursor: pointer;
             --ggs: 150%;
         }
-        
+
         .field {
             margin-bottom: 1em;
             display: flex;
@@ -72,7 +72,7 @@
             align-items: center;
             flex-direction: row;
         }
-        
+
         .untouchable {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -81,68 +81,77 @@
             -ms-user-select: none;
             user-select: none;
         }
-        
+
         .flex {
             display: flex;
             flex-direction: row;
         }
-        
+
         @media only screen and (max-width: 600px) {
             .mobile_only {
                 display: inherit;
             }
+
             .desktop_only {
                 display: none;
             }
         }
-        
+
         @media only screen and (min-width: 600px) {
             .mobile_only {
                 display: none;
             }
+
             .desktop_only {
                 display: inherit;
             }
         }
-        
+
         #inp input {
             background-color: #fff;
             border: none;
             border-radius: 5px;
             font-size: 1em;
         }
-        
+
         .title {
             font-size: 1.5em;
             font-weight: bold;
         }
-        
+
         .invisible {
             display: none;
         }
-        
+
         img {
-            max-width: 100%;
+            max-width: 120px;
             height: auto;
         }
-        
+
         #out_link {
             text-decoration: none;
             color: inherit;
         }
-        
+
         #logo {
             width: 60px;
             height: 60px;
         }
-        
+
         .invert {
             filter: invert(100%);
         }
-        
+
         a {
             text-decoration: none;
             color: inherit;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
         }
     </style>
 </head>
@@ -150,7 +159,7 @@
 <body class="dark_mode">
     <header class="untouchable flex">
         <div class="title">
-            <a href="/credits">Geolokační hra | GGPraha</a>
+            Geolokační hra | GGPraha
         </div>
         &nbsp;&nbsp;
 
@@ -163,7 +172,8 @@
     </header>
 
     <div class="flex mobile_only" style="white-space: nowrap;">
-        Černý režim &nbsp;&nbsp; <i class="gg-toggle-off dm_toggle" id="dm_toggle_m" style="display: inline-block; align-self: center;"></i>
+        Černý režim &nbsp;&nbsp; <i class="gg-toggle-off dm_toggle" id="dm_toggle_m"
+            style="display: inline-block; align-self: center;"></i>
         <br><br>
     </div>
     <a href="/report">Nahlašte případnou závadu</a>
@@ -212,7 +222,6 @@
             </ul>
         </div>
 
-        <img src="/images/trasa.jpg" alt="trasa">
         <div id=”howto”>
             <b>A jak si můžeš hru zahrát?</b>
             <ul>
@@ -235,20 +244,20 @@
         </h2>
         <ul>
             <li>
-                Honza (<a href="https://linktr.ee/PanJohnny">@PanJohnny</a>) - webová stránka
+                Honza - webová stránka
             </li>
             <li>
-                Ondra (<a href="https://www.instagram.com/fikrondra/">@Onfra</a>) - administrace projektu, zařizování
-                povolení
+                Ondřej Fikr - administrace projektu, zařizování
+                povolení, vý
             </li>
             <li>
-                Matěj (@Mateuszeus) - zjišťování informací o místech, formátování
+                Matěj Myška - zjišťování informací o místech, formátování
             </li>
             <li>
-                Karel (@Svickova) - design, logo, morální podpora
+                Karel Erban - design, logo, morální podpora, fotografie
             </li>
             <li>
-                Jáchym (<a href="https://www.instagram.com/jajus14kalus/">@Jajus14</a>) - komunikace s externími
+                Jáchym Kalus - komunikace s externími
                 odborníky,
                 zjišťování informací
             </li>
@@ -256,11 +265,12 @@
 
         <hr>
         <h2>Zdroje</h2>
-        wikipedie.cz, kudyznudy.cz, gymlit.cz, dpp.cz, nasepraha.cz, vylety-zabava.cz, sv.dvur.cz
+        wikipedie.cz, kudyznudy.cz, gymlit.cz, dpp.cz, nasepraha.cz, vylety-zabava.cz, sv.dvur.cz, umenipromesto.eu, mapy.cz
     </div>
 
     <footer>
-        <hr> Coded by <a href="https://github.com/PanJohnny">PanJohnny</a> | <a href="https://github.com/ggpraha/ggpraha.github.io">Opensourced under MIT License ♥</a> |
+        <hr> Coded by <a href="https://github.com/PanJohnny">PanJohnny</a> | <a
+            href="https://github.com/ggpraha/ggpraha.github.io">Opensourced under MIT License ♥</a> |
         <a href="https://gymlit.cz">Gymnázium Praha 9 Litoměřická</a>
     </footer>
     <script>
@@ -275,12 +285,12 @@
         }
 
         // detect click on toggle
-        document.getElementById("dm_toggle").addEventListener("click", function() {
+        document.getElementById("dm_toggle").addEventListener("click", function () {
             toggleMode(this);
         });
 
         // detect click on toggle
-        document.getElementById("dm_toggle_m").addEventListener("click", function() {
+        document.getElementById("dm_toggle_m").addEventListener("click", function () {
             toggleMode(this);
         });
 
@@ -293,21 +303,27 @@
             document.getElementById("logo").classList.toggle("invert");
         }
 
-        document.getElementById("out_link").addEventListener("click", function() {
+        document.getElementById("out_link").addEventListener("click", function () {
             window.open(link, '_blank');
         });
 
         // detect number being confirmed
-        document.getElementById("lampa").addEventListener("keyup", function(event) {
+        document.getElementById("lampa").addEventListener("keyup", function (event) {
             if (event.key.toLowerCase() == "enter" || event.key.toLowerCase() == "return") {
                 getPlaceById(this.value);
             }
         });
 
+        function imageError(image) {
+            image.onerror = "";
+            image.src = "/images/img_error.png";
+            return true;
+        }
+
         function getPlaceById(id) {
             // read file lampy.json
             var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
+            xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     var data = JSON.parse(this.responseText);
                     var place = data.find(x => x.lampa == id);
@@ -322,15 +338,11 @@
 
                     var lokace = place.lokace;
                     var popis = place.popis;
-                    var photo = place.photo_link + "";
-
-                    if(photo.includes("&&&")) {
-                        photo = place.photo_link.split("&&&")[Math.floor(Math.random()*2)];
-                    }
+                    var photo = "/images/"+id+".jpg";
 
                     document.getElementById("out_name").innerHTML = lokace;
                     document.getElementById("out_popis").innerHTML = popis;
-                    document.getElementById("out_img").innerHTML = '<img src="' + photo + '" alt="Image of ' + lokace + '">';
+                    document.getElementById("out_img").innerHTML = '<img src="' + photo + '" alt="Obrázek" onError="noImage(this)">';
                     link = place.map_link;
 
                     // toggle visibility
