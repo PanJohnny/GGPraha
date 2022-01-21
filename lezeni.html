@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lezení a člověk</title>
+    <style>
+        .internal {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
 </head>
+
 <body>
-    <embed src= "/lezeni_a_clovek.pdf" width="400" height= "375">
+    <div class="container">
+        <embed src="/lezeni_a_clovek.pdf" class="internal">
+    </div>
 </body>
+
 </html>
