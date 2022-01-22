@@ -23,6 +23,11 @@
 </head>
 
 <body>
+    <script>
+        if(!('options' in document.createElement('embed'))) {
+            window.location.href = '/lezeni_a_clovek.pdf'
+        }
+    </script>
     <div class="container">
         <embed src="/lezeni_a_clovek.pdf" class="internal">
     </div>
