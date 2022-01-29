@@ -112,6 +112,7 @@
             border: none;
             border-radius: 5px;
             font-size: 1em;
+            outline: none;
         }
 
         .title {
@@ -146,13 +147,21 @@
             text-decoration: none;
             color: inherit;
         }
+
+        button {
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.4em;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body class="dark_mode">
     <header class="untouchable flex">
-        <div class="title">
-            Geolokační hra | GGPraha
+        <div>
+            <h1 class="title">Geolokační hra | GGPraha</h1>
         </div>
         &nbsp;&nbsp;
 
@@ -171,9 +180,17 @@
     </div>
     <a href="/report">Nahlašte případnou závadu</a>
     <br>
-    <div id="inp" class="flex">
-        Zadejte číslo lampy:
-        <input type="number" name="lampa" id="lampa" placeholder="Číslo lampy">
+    <div id="inp">
+        <div class="flex">
+            Zadejte číslo lampy:&nbsp;&nbsp;
+            <input type="number" name="lampa" id="lampa" placeholder="Číslo lampy">
+        </div>
+        <br>
+        <div class="flex">Zadejte tajný kód:&nbsp;&nbsp;
+            <input type="number" name="secret" id="secret" placeholder="Tajný kód">
+        </div>
+
+        <button type="submit"onclick="confirm()">Odeslat</button>
     </div>
 
     <div id="out" class="invisible">
@@ -258,7 +275,8 @@
 
         <hr>
         <h2>Zdroje</h2>
-        wikipedie.cz, kudyznudy.cz, gymlit.cz, dpp.cz, nasepraha.cz, vylety-zabava.cz, sv.dvur.cz, umenipromesto.eu, mapy.cz
+        wikipedie.cz, kudyznudy.cz, gymlit.cz, dpp.cz, nasepraha.cz, vylety-zabava.cz, sv.dvur.cz, umenipromesto.eu,
+        mapy.cz
     </div>
 
     <footer>
@@ -301,11 +319,15 @@
         });
 
         // detect number being confirmed
-        document.getElementById("lampa").addEventListener("keyup", function (event) {
+        document.getElementById("secret").addEventListener("keyup", function (event) {
             if (event.key.toLowerCase() == "enter" || event.key.toLowerCase() == "return") {
-                getPlaceById(this.value);
+                confirm()
             }
         });
+
+        function confirm() {
+            getPlaceById(document.getElementById("lampa").value, document.getElementById("secret").value);
+        }
 
         function noImage(image) {
             image.onerror = "";
@@ -313,36 +335,48 @@
             return true;
         }
 
-        function getPlaceById(id) {
+        function getPlaceById(id, secret) {
             // read file lampy.json
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    var data = JSON.parse(this.responseText);
-                    var place = data.find(x => x.lampa == id);
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        var place = JSON.parse(this.responseText);
 
-                    if (!place) {
-                        document.getElementById("out").classList.add("invisible");
-                        document.getElementById("out_name").innerHTML = "";
-                        document.getElementById("out_popis").innerHTML = "";
-                        document.getElementById("out_img").innerHTML = "";
-                        return;
+                        if (!place) {
+                            document.getElementById("out").classList.add("invisible");
+                            document.getElementById("out_name").innerHTML = "";
+                            document.getElementById("out_popis").innerHTML = "";
+                            document.getElementById("out_img").innerHTML = "";
+                            return;
+                        }
+
+                        var lokace = place.name;
+                        var popis = place.decription;
+                        var photo = "/images/" + id + ".jpg";
+
+                        document.getElementById("out_name").innerHTML = lokace;
+                        document.getElementById("out_popis").innerHTML = popis;
+                        document.getElementById("out_img").innerHTML = '<img src="' + photo + '" alt="Obrázek" onError="noImage(this)">';
+                        link = place.map_link;
+
+                        // toggle visibility
+                        document.getElementById("out").classList.toggle("invisible");
+                    } else if(this.status == 500) {
+                        window.alert("Nepodařilo se načíst informace o místě.");
+                    } else if(this.status == 400) {
+                        window.alert("Nesprávné číslo lampy/špatný kód.");
                     }
-
-                    var lokace = place.lokace;
-                    var popis = place.popis;
-                    var photo = "/images/"+id+".jpg";
-
-                    document.getElementById("out_name").innerHTML = lokace;
-                    document.getElementById("out_popis").innerHTML = popis;
-                    document.getElementById("out_img").innerHTML = '<img src="' + photo + '" alt="Obrázek" onError="noImage(this)">';
-                    link = place.map_link;
-
-                    // toggle visibility
-                    document.getElementById("out").classList.toggle("invisible");
                 }
             };
-            xhttp.open("GET", "lampy.json", true);
+            xhttp.onerror = function () {
+                window.alert("Nepodařilo se načíst informace o místě.");
+            };
+            xhttp.open("GET", "https://panjohnny.vercel.app/api/v1/ggpraha", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.setRequestHeader("id", id);
+            xhttp.setRequestHeader("secret", secret);
+            
             xhttp.send();
         }
     </script>

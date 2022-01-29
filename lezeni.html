@@ -24,7 +24,7 @@
 
 <body>
     <script>
-        if(!('options' in document.createElement('embed'))) {
+        if(!document.createElement('embed').getContext) {
             window.location.href = '/lezeni_a_clovek.pdf'
         }
     </script>
