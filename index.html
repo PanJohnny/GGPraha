@@ -190,7 +190,7 @@
             <input type="number" name="secret" id="secret" placeholder="Tajný kód">
         </div>
 
-        <button type="submit"onclick="confirm()">Odeslat</button>
+        <button type="submit" onclick="confirm()">Odeslat</button>
     </div>
 
     <div id="out" class="invisible">
@@ -289,10 +289,14 @@
         var toggle_on = "gg-toggle-on";
         var link = "";
 
-        // check if there is a hash in the url and if it is a lampa number (only numbers)
-        if (window.location.hash.length > 0 && !isNaN(window.location.hash.substring(1))) {
-            document.getElementById("lampa").value = window.location.hash.substring(1);
-            getPlaceById(window.location.hash.substring(1));
+        if (window.location.hash.substring(1)) {
+            const hash = window.location.hash.substring(1)
+            if (hash.includes("+")) {
+                const split = hash.split("+");
+                document.getElementById("lampa").value = split[0];
+                document.getElementById("secret").value = split[1];
+                submit()
+            }
         }
 
         // detect click on toggle
@@ -362,9 +366,9 @@
 
                         // toggle visibility
                         document.getElementById("out").classList.toggle("invisible");
-                    } else if(this.status == 500) {
+                    } else if (this.status == 500) {
                         window.alert("Nepodařilo se načíst informace o místě.");
-                    } else if(this.status == 400) {
+                    } else if (this.status == 400) {
                         window.alert("Nesprávné číslo lampy/špatný kód.");
                     }
                 }
@@ -376,7 +380,7 @@
             xhttp.setRequestHeader("Content-type", "application/json");
             xhttp.setRequestHeader("id", id);
             xhttp.setRequestHeader("secret", secret);
-            
+
             xhttp.send();
         }
     </script>
