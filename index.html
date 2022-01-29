@@ -289,16 +289,6 @@
         var toggle_on = "gg-toggle-on";
         var link = "";
 
-        if (window.location.hash.substring(1)) {
-            const hash = window.location.hash.substring(1)
-            if (hash.includes("+")) {
-                const split = hash.split("+");
-                document.getElementById("lampa").value = split[0];
-                document.getElementById("secret").value = split[1];
-                submit()
-            }
-        }
-
         // detect click on toggle
         document.getElementById("dm_toggle").addEventListener("click", function () {
             toggleMode(this);
@@ -382,6 +372,16 @@
             xhttp.setRequestHeader("secret", secret);
 
             xhttp.send();
+        }
+
+        if (window.location.hash.substring(1)) {
+            const hash = window.location.hash.substring(1)
+            if (hash.includes("+")) {
+                const split = hash.split("+");
+                document.getElementById("lampa").value = split[0];
+                document.getElementById("secret").value = split[1];
+                submit()
+            }
         }
     </script>
 </body>
