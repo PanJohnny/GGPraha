@@ -33,34 +33,36 @@
     <!--Icon-->
     <link rel="icon" href="gglogo.jpg">
 
+    <link rel="stylesheet" href="style.css">
+
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 16px;
-            line-height: 1.5;
+            line-height: 1.5
         }
-        
+
         .dark_mode {
             background-color: #1a1a1a;
-            color: #e5e5e5;
+            color: #e5e5e5
         }
-        
+
         .light_mode {
             background-color: #e5e5e5;
-            color: #1a1a1a;
+            color: #1a1a1a
         }
-        
+
         .title {
             font-size: 2em;
-            font-weight: bold;
+            font-weight: 700
         }
-        
+
         .dm_toggle {
             position: inherit;
             cursor: pointer;
-            --ggs: 150%;
+            --ggs: 150%
         }
-        
+
         .field {
             margin-bottom: 1em;
             display: flex;
@@ -68,85 +70,87 @@
             border-style: solid;
             border-width: 2px;
             border-radius: 5px;
-            padding: 0.7em;
+            padding: .7em;
             align-items: center;
-            flex-direction: row;
+            flex-direction: row
         }
-        
+
         .untouchable {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             -khtml-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
-            user-select: none;
+            user-select: none
         }
-        
+
         .flex {
             display: flex;
-            flex-direction: row;
+            flex-direction: row
         }
-        
-        @media only screen and (max-width: 600px) {
+
+        @media only screen and (max-width:600px) {
             .mobile_only {
-                display: inherit;
+                display: inherit
             }
+
             .desktop_only {
-                display: none;
+                display: none
             }
         }
-        
-        @media only screen and (min-width: 600px) {
+
+        @media only screen and (min-width:600px) {
             .mobile_only {
-                display: none;
+                display: none
             }
+
             .desktop_only {
-                display: inherit;
+                display: inherit
             }
         }
-        
+
         input {
             background-color: #fff;
             border: none;
             border-radius: 5px;
-            font-size: 1em;
+            font-size: 1em
         }
-        
+
         .title {
             font-size: 1.5em;
-            font-weight: bold;
+            font-weight: 700
         }
-        
+
         .invisible {
-            display: none;
+            display: none
         }
-        
+
         img {
             max-width: 100%;
-            height: auto;
+            height: auto
         }
-        
+
         #out_link {
             text-decoration: none;
-            color: inherit;
+            color: inherit
         }
-        
+
         #logo {
             width: 60px;
-            height: 60px;
+            height: 60px
         }
-        
+
         .invert {
-            filter: invert(100%);
+            filter: invert(100%)
         }
-        
+
         #popis {
-            width: 90%;
+            width: 90%
         }
-        
+
         a {
             text-decoration: none;
-            color: inherit;
+            color: inherit
         }
     </style>
 </head>
@@ -167,7 +171,8 @@
     </header>
 
     <div class="flex mobile_only" style="white-space: nowrap;">
-        Tmavý režim &nbsp;&nbsp; <i class="gg-toggle-off dm_toggle" id="dm_toggle_m" style="display: inline-block; align-self: center;"></i>
+        Tmavý režim &nbsp;&nbsp; <i class="gg-toggle-off dm_toggle" id="dm_toggle_m"
+            style="display: inline-block; align-self: center;"></i>
         <br><br>
     </div>
 
@@ -176,13 +181,16 @@
     </h2>
 
     <h3>Závada s QR kódem</h3>
-    <input type="button" value="Nahlásit" onclick="window.location.href = 'https://github.com/ggpraha/ggpraha.github.io/issues/new?assignees=Onfra&labels=bug&template=probl-m-se--t-tkem.md&title=%5BPSS%5D'">
+    <input type="button" value="Nahlásit"
+        onclick="window.location.href = 'https://github.com/ggpraha/ggpraha.github.io/issues/new?assignees=Onfra&labels=bug&template=probl-m-se--t-tkem.md&title=%5BPSS%5D'">
 
     <h3>Závada s webem</h3>
-    <input type="button" value="Nahlásit" onclick="window.location.href = 'https://github.com/ggpraha/ggpraha.github.io/issues/new?assignees=PanJohnny&labels=bug&template=z-vada.md&title=%5BBUG%5D'">
+    <input type="button" value="Nahlásit"
+        onclick="window.location.href = 'https://github.com/ggpraha/ggpraha.github.io/issues/new?assignees=PanJohnny&labels=bug&template=z-vada.md&title=%5BBUG%5D'">
 
     <h3>Jinná závada</h3>
-    <input type="button" value="Nahlásit" onclick="window.location.href = 'https://github.com/ggpraha/ggpraha.github.io/issues/new'">
+    <input type="button" value="Nahlásit"
+        onclick="window.location.href = 'https://github.com/ggpraha/ggpraha.github.io/issues/new'">
 
     <h3>Jinné</h3>
     <i>Pokud máte jinný problém, nahlašte ho na email.</i>
@@ -190,7 +198,8 @@
 
     Nezavazujeme se k odpovědi na spam a k odpovědi do určité doby. Ozvat by jsme se Vám mohli do sedmi pracovních dnů.
     <footer>
-        <hr> Coded by <a href="https://github.com/PanJohnny">PanJohnny</a> | <a href="https://github.com/ggpraha/ggpraha.github.io">Opensourced under MIT License ♥</a> |
+        <hr> Coded by <a href="https://github.com/PanJohnny">PanJohnny</a> | <a
+            href="https://github.com/ggpraha/ggpraha.github.io">Opensourced under MIT License ♥</a> |
         <a href="https://gymlit.cz">Gymnázium Praha 9 Litoměřická</a>
     </footer>
 
@@ -205,12 +214,12 @@
         }
 
         // detect click on toggle
-        document.getElementById("dm_toggle").addEventListener("click", function() {
+        document.getElementById("dm_toggle").addEventListener("click", function () {
             toggleMode(this);
         });
 
         // detect click on toggle
-        document.getElementById("dm_toggle_m").addEventListener("click", function() {
+        document.getElementById("dm_toggle_m").addEventListener("click", function () {
             toggleMode(this);
         });
 
