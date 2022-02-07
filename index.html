@@ -38,19 +38,14 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2M63XHNQM1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-2M63XHNQM1');
-    </script>
+    <script src="https://kit.fontawesome.com/dd0d559326.js" crossorigin="anonymous"></script>
 
     <style>
         body {
             font-family: Roboto, sans-serif;
             font-size: 16px;
-            line-height: 1.5
+            line-height: 1.5;
+            display: block;
         }
 
         .dark_mode {
@@ -66,12 +61,6 @@
         .title {
             font-size: 2em;
             font-weight: 700
-        }
-
-        .dm_toggle {
-            position: inherit;
-            cursor: pointer;
-            --ggs: 150%
         }
 
         .field {
@@ -169,6 +158,62 @@
             cursor: pointer
         }
     </style>
+
+    <!--Cookies-->
+    <style>
+        #cookie-consent {
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            background-color: #f7fa25;
+            color: #3a3a3a;
+            font-size: 1.2rem;
+            text-align: center;
+            z-index: 2;
+        }
+
+        #cookie-consent button {
+            border: none;
+            background-color: #fafafa;
+            height: 1.2rem;
+            width: auto;
+            font: inherit;
+            width: 100%;
+            height: auto;
+            border-top: black 1px;
+        }
+
+        #denycookie:hover {
+            animation: sad 1s;
+            animation-fill-mode: forwards;
+        }
+
+        #acceptcookie:hover {
+            animation: happy 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes sad {
+            0% {
+                background-color: lightcoral;
+            }
+
+            100% {
+                background-color: rgb(255, 79, 79);
+            }
+        }
+
+        @keyframes happy {
+            0% {
+                background-color: initial;
+            }
+
+            100% {
+                background-color: greenyellow;
+            }
+        }
+    </style>
 </head>
 
 <body class="dark_mode">
@@ -179,7 +224,7 @@
         &nbsp;&nbsp;
 
         <div class="field desktop_only">
-            Tmavý režim &nbsp;&nbsp;<i class="gg-toggle-off dm_toggle" id="dm_toggle"></i>
+            Tmavý režim &nbsp;&nbsp;<i class="fas fa-toggle-on dm_toggle" id="dm_toggle"></i>
         </div>
 
         <img src="gglogo.jpg" alt="Game logo" id="logo" class="">
@@ -187,11 +232,10 @@
     </header>
 
     <div class="flex mobile_only" style="white-space: nowrap;">
-        Tmavý režim &nbsp;&nbsp; <i class="gg-toggle-off dm_toggle" id="dm_toggle_m"
-            style="display: inline-block; align-self: center;"></i>
+        Tmavý režim &nbsp;&nbsp; <i class="fas fa-toggle-on dm_toggle" id="dm_toggle_m"></i>
         <br><br>
     </div>
-    <a href="/report">Nahlašte případnou závadu</a>
+    <a href="/report">Klkněte zde pro nahlášení závady</a>
     <br>
     <div id="inp">
         <div class="flex">
@@ -226,7 +270,7 @@
         <p>Když se řekne Prosek, většina lidí si představí nudné sídliště s vysokými šedými paneláky bez nápadu se
             spoustou
             betonových ploch mezi nimi a s nedostatečnou zelení. Tak to mohlo vypadat před téměř 50 lety, kdy sídliště
-            vznikalo. Ale je tomu opravdu tak i nyní? Opravdu nejsou na Proseku zajímavá místa s historií, ať už s
+            vznikalo. Ale je tomu opravdu tak i nyní? Opravdu nejsou na Proseku zajímavá místa spojená s historií, ať už s
             dřívější
             nebo nedávnou? Pokud se chceš přesvědčit o opaku a něco se o zajímavých místech v této lokalitě dozvědět,
             tato
@@ -238,10 +282,7 @@
                 <li>Doba trvání: cca 1,5 hod</li>
                 <li>Počet zastavení: 10</li>
                 <li>Začátek a konec hry: u stanice metra Prosek (před Billou)</li>
-                <li>Terén asfaltové cesty a chodníky</li>
-                <li>Profil: téměř rovina až mírný kopec</li>
-                <li>Dostupnost: za každého počasí, 24/7</li>
-                <li>Pro koho je hra vhodná: pro všechny pro všechny bez rozdílu věku (také i pro kočárky)</li>
+                <li>Hra je určená pro všechny věkové kategorie</li>
             </ul>
         </div>
 
@@ -253,9 +294,7 @@
                 </li>
                 <li>
                     v blízkosti každé zastávky je lampa pouličního osvětlení, která má na sobě unikátní číslo, správnou
-                    lampu musíš najít a toto číslo je nutné vepsat do políčka nahoře na této webové stránce a pokud je
-                    číslo
-                    správné, objeví se informace o příslušném místě
+                    lampu musíš najít a zadat do pole číslo a tajný kód.
                 </li>
             </ul>
             <b>Hodně štěstí!!! Odměnou Ti budou nové a jistě i zajímavé informace o této městské části.</b>
@@ -267,11 +306,11 @@
         </h2>
         <ul>
             <li>
-                Honza - webová stránka
+                Honza Štefanča- webová stránka
             </li>
             <li>
                 Ondřej Fikr - administrace projektu, zařizování
-                povolení, vý
+                povolení, informace o projektu
             </li>
             <li>
                 Matěj Myška - zjišťování informací o místech, formátování
@@ -287,19 +326,66 @@
         </ul>
 
         <hr>
+        <h2>
+            Stránka
+        </h2>
+        Tato stránka používá google analytics a font awesome. Zdrojový kód je licencován pod licencí MIT. Více o licence najde <a href="https://github.com/ggpraha/ggpraha.github.io/blob/main/LICENSE">zde</a>. Naše api je veřejné dokumentace na: <a href="https://panjohnny.vercel.app/docs#tag/ggpraha">panjohnny.vercel.app/docs</a>.
+        <hr>
         <h2>Zdroje</h2>
         wikipedie.cz, kudyznudy.cz, gymlit.cz, dpp.cz, nasepraha.cz, vylety-zabava.cz, sv.dvur.cz, umenipromesto.eu,
         mapy.cz
     </div>
 
+    <div name="dummy" class="desktop_only">
+        <br><br>
+    </div>
+
+    <div id="cookie-consent">
+        <i class="fas fa-cookie"></i> Tato stránka používá cookies ke zbírání analitických dat (počet návštěv, ...).
+        <button type="submit" id="acceptcookie" onclick="acceptcookie()"><i
+                class="fas fa-cookie-bite"></i>Povolit</button>
+        <button type="submit" id="denycookie" onclick="denycookie()"><i class="fas fa-frown-open"></i>Zakázat</button>
+    </div>
+    <script>
+
+        setInterval(() => {
+            if (document.getElementById("cookie-consent").style.display != "none") {
+                // move the element to the bottom of screen using html
+                document.getElementById("cookie-consent").style.bottom = "0";
+            }
+        }, 1)
+        if (isCookieAccepted()) {
+            document.getElementById('cookie-consent').style.display = 'none'
+        }
+
+        function denycookie() {
+            document.getElementById('cookie-consent').style.display = 'none'
+            window.localStorage.clear()
+        }
+
+        function acceptcookie() {
+            document.getElementById('cookie-consent').style.display = 'none'
+            window.localStorage.setItem('cookie', 'true')
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-2M63XHNQM1');
+        }
+
+        function isCookieAccepted() {
+            return window.localStorage.getItem('cookie') == 'true';
+        }
+    </script>
     <footer>
-        <hr> Coded by <a href="https://github.com/PanJohnny">PanJohnny</a> | <a
-            href="https://github.com/ggpraha/ggpraha.github.io">Opensourced under MIT License ♥</a> |
+        <hr> Naprogramoval <a href="https://github.com/PanJohnny">Jan Štefanča</a> | <a
+            href="https://github.com/ggpraha/ggpraha.github.io">Kód na <i class="fa fa-github"></i>GitHubu</a> |
         <a href="https://gymlit.cz">Gymnázium Praha 9 Litoměřická</a>
     </footer>
     <script>
-        var toggle_off = "gg-toggle-off";
-        var toggle_on = "gg-toggle-on";
+        var toggle_off = "fa-toggle-off";
+        var toggle_on = "fa-toggle-on";
         var link = "";
 
         // detect click on toggle

@@ -151,6 +151,9 @@
             color: inherit
         }
     </style>
+
+    
+<script src="https://kit.fontawesome.com/dd0d559326.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="dark_mode">
@@ -161,7 +164,7 @@
         &nbsp;&nbsp;
 
         <div class="field desktop_only">
-            Tnavý režim &nbsp;&nbsp;<i class="gg-toggle-off dm_toggle" id="dm_toggle"></i>
+            Tnavý režim &nbsp;&nbsp;<i class="fas fa-toggle-on dm_toggle" id="dm_toggle"></i>
         </div>
 
         <img src="gglogo.jpg" alt="Game logo" id="logo" class="">
@@ -169,14 +172,16 @@
     </header>
 
     <div class="flex mobile_only" style="white-space: nowrap;">
-        Tmavý režim &nbsp;&nbsp; <i class="gg-toggle-off dm_toggle" id="dm_toggle_m"
+        Tmavý režim &nbsp;&nbsp; <i class="fas fa-toggle-on dm_toggle" id="dm_toggle_m"
             style="display: inline-block; align-self: center;"></i>
         <br><br>
     </div>
 
-    <h2>
-        Prosíme nahlašte závadu
-    </h2>
+    <h3>
+        <a href="/">
+         Zpět na domovskou obrazovku <i class="fas fa-home"></i>
+        </a>
+    </h3>
 
     <h3>Závada s QR kódem</h3>
     <input type="button" value="Nahlásit"
@@ -186,24 +191,23 @@
     <input type="button" value="Nahlásit"
         onclick="window.location.href = 'https://github.com/ggpraha/ggpraha.github.io/issues/new?assignees=PanJohnny&labels=bug&template=z-vada.md&title=%5BBUG%5D'">
 
-    <h3>Jinná závada</h3>
+    <h3>Jiná závada</h3>
     <input type="button" value="Nahlásit"
         onclick="window.location.href = 'https://github.com/ggpraha/ggpraha.github.io/issues/new'">
 
-    <h3>Jinné</h3>
-    <i>Pokud máte jinný problém, nahlašte ho na email.</i>
-    Email: <a href="mailto:ggpraha.pomoc@gmail.com">ggpraha.pomoc@gmail.com</a>
+    <h3>Email</h3>
+    Případně nahlašte na email: <a href="mailto:ggpraha.pomoc@gmail.com">ggpraha.pomoc@gmail.com</a> <br> <br>
 
-    Nezavazujeme se k odpovědi na spam a k odpovědi do určité doby. Ozvat by jsme se Vám mohli do sedmi pracovních dnů.
+    Nezavazujeme se k odpovědi na spam a k odpovědi do určité doby. Ozvat by jsme se Vám <b>mohli</b> do sedmi pracovních dnů.
     <footer>
-        <hr> Coded by <a href="https://github.com/PanJohnny">PanJohnny</a> | <a
-            href="https://github.com/ggpraha/ggpraha.github.io">Opensourced under MIT License ♥</a> |
+        <hr> Naprogramoval <a href="https://github.com/PanJohnny">Jan Štefanča</a> | <a
+            href="https://github.com/ggpraha/ggpraha.github.io">Kód na <i class="fa fa-github"></i>GitHubu</a> |
         <a href="https://gymlit.cz">Gymnázium Praha 9 Litoměřická</a>
     </footer>
 
     <script>
-        var toggle_off = "gg-toggle-off";
-        var toggle_on = "gg-toggle-on";
+        var toggle_off = "fa-toggle-off";
+        var toggle_on = "fa-toggle-on";
 
         // check if there is a hash in the url and if it is a lampa number (only numbers)
         if (window.location.hash.length > 0 && !isNaN(window.location.hash.substring(1))) {
