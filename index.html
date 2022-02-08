@@ -347,15 +347,8 @@
         <button type="submit" id="denycookie" onclick="denycookie()"><i class="fas fa-frown-open"></i>Zakázat</button>
     </div>
     <script>
-
-        setInterval(() => {
-            if (document.getElementById("cookie-consent").style.display != "none") {
-                // move the element to the bottom of screen using html
-                document.getElementById("cookie-consent").style.bottom = "0";
-            }
-        }, 1)
         if (isCookieAccepted()) {
-            document.getElementById('cookie-consent').style.display = 'none'
+            acceptcookie()
         }
 
         function denycookie() {
