@@ -89,26 +89,6 @@
             flex-direction: row
         }
 
-        @media only screen and (max-width:600px) {
-            .mobile_only {
-                display: inherit
-            }
-
-            .desktop_only {
-                display: none
-            }
-        }
-
-        @media only screen and (min-width:600px) {
-            .mobile_only {
-                display: none
-            }
-
-            .desktop_only {
-                display: inherit
-            }
-        }
-
         #inp input {
             background-color: #fff;
             border: none;
@@ -124,11 +104,6 @@
 
         .invisible {
             display: none
-        }
-
-        img {
-            max-width: 120px;
-            height: auto
         }
 
         #out_link {
@@ -213,10 +188,46 @@
                 background-color: greenyellow;
             }
         }
-        
+
+        /* Image fits screen*/
         img {
             width: 100%;
-            height:auto;
+            height: auto;
+        }
+
+        .map:hover {
+            cursor: pointer;
+        }
+
+        .map {
+            width: 100%;
+            height: auto;
+            background-color: #e5e5e5;
+        }
+
+        @media only screen and (max-width:600px) {
+            .mobile_only {
+                display: inherit
+            }
+
+            .desktop_only {
+                display: none
+            }
+        }
+
+        @media only screen and (min-width:600px) {
+            .mobile_only {
+                display: none
+            }
+
+            .desktop_only {
+                display: inherit
+            }
+
+            .map {
+                width: 50%;
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -262,7 +273,7 @@
         <div class="flex" style="text-align: center;">
             <i class="gg-link" id="out_link"></i>
         </div>
-        <p id="out_popis"></p>
+        <p id="out_popis" class="img_container"></p>
 
 
         <div id="out_img"></div>
@@ -297,7 +308,9 @@
                 <summary>
                     <b>Klikněte pro zobrazení mapy přibližných lokací</b>
                 </summary>
-                <img src="images/mapa.png" alt="mapa">
+                    <a href="images/mapa.png">
+                    <img src="images/mapa.png" alt="mapa" class="map">
+                    </a>
             </details>
         </div>
         <br>
@@ -345,8 +358,8 @@
             Stránka
         </h2>
         Tato stránka používá google analytics a font awesome. Zdrojový kód je licencován pod licencí MIT. Více o licence
-        najde <a href="https://github.com/ggpraha/ggpraha.github.io/blob/main/LICENSE">zde</a>. Naše api je veřejné
-        dokumentace na: <a href="https://panjohnny.vercel.app/docs#tag/ggpraha">panjohnny.vercel.app/docs</a>.
+        najde <a href="https://github.com/ggpraha/ggpraha.github.io/blob/main/LICENSE">zde</a>. Naše api je veřejné,
+        dokumentaci najdete na: <a href="https://panjohnny.vercel.app/docs#tag/ggpraha">panjohnny.vercel.app/docs</a>.
         <hr>
         <h2>Zdroje</h2>
         wikipedie.cz, kudyznudy.cz, gymlit.cz, dpp.cz, nasepraha.cz, vylety-zabava.cz, sv.dvur.cz, umenipromesto.eu,
