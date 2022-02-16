@@ -1,0 +1,25 @@
+{
+  "background_color": "white",
+  "description": "GGPraha",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "/ggpraha.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/images/img_error.png,
+      "size": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/mapa.png,
+      "size": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Geolokační hra Gymnázium Litoměřická",
+  "short_name": "GGPraha",
+  "start_url": "/index.html"
+}
