@@ -233,6 +233,53 @@
 </head>
 
 <body class="dark_mode">
+    <div id="disclaimerPopup">
+        <h2>Upozornění</h2>
+        <p>Tento projekt již není funkční a instalace štítků na lampy osvětlení nebyla uskutečněna. Tato stránka už slouží pouze pro inspiraci. Děkujeme za návštěvu!</p>
+        <input type="button" value="Zavřít" onclick="buttonInter()">
+    </div>
+
+    <style>
+        #disclaimerPopup {
+            position: fixed;
+            top: 40%;
+            left: 25%;
+            border: white solid 1px;
+            border-radius: 10px;
+            padding: 1em;
+            background-color: #1a1a1a;
+            z-index: 100;
+        }
+
+        #disclaimerPopup > input {
+            position: relative;
+            left: 94%;
+            border-radius: 5px;
+            padding: 0.4em;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('load', () => {
+            if (document.querySelector('#disclaimerPopup').style.display != 'none') {
+                for (let index = 0; index < document.body.children.length; index++) {
+                    const element = document.body.children[index];
+                    if (element.id != 'disclaimerPopup')
+                        element.style.filter = "blur(5px)"
+                }
+            }
+        })
+
+        
+        function buttonInter(){
+            document.querySelector('#disclaimerPopup').style.display = 'none'
+            for (let index = 0; index < document.body.children.length; index++) {
+                const element = document.body.children[index];
+                element.style.filter = ""
+            }
+        }
+    </script>
+
     <header class="untouchable flex">
         <div>
             <h1 class="title">Geolokační hra | GGPraha</h1>
